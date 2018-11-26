@@ -13,7 +13,6 @@ Person.prototype.print = function() {
 }
 
 Person() // inside the function Person() 'this' keyword points to Window
-
 const p1 = new Person(); // inside the function Person(), 'this' keyword changes the context from window objet to a newly constructed object
 
 p1.print();
@@ -41,10 +40,11 @@ class Person {
     }
 }
 
-var p1 = new Person('vinod', 'vinod@vinod.co', 45);
-p1.print();
-
 
 window['name'] = 'john';
 window['age'] = 22;
-window['city'] = 'Dallas';
+window['email'] = 'john@xmpl.com';
+
+
+var p1 = new Person('vinod', 'vinod@vinod.co', 45);
+p1.print();
