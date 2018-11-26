@@ -45,6 +45,6 @@ var p1 = new Person('vinod', 'vinod@vinod.co', 45);
 p1.print();
 
 
-window.name = 'john';
-window.age = 22;
-window.city = 'Dallas';
+window['name'] = 'john';
+window['age'] = 22;
+window['city'] = 'Dallas';
