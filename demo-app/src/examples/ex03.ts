@@ -32,7 +32,7 @@ class Person {
 
     print() {
         // arrow functions remember 'this' means the invoking object
-        // regular function don't
+        // regular functions change the context from invoking object to 'window'
         setTimeout(() => {
             console.log('Name  = %s', this.name);
             console.log('Email = %s', this.email);
