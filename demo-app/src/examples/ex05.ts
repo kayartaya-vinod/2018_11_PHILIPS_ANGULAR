@@ -8,7 +8,10 @@ import { WelcomeComponent } from "./components/welcome.component";
 
 @Component({
     selector: 'hello-world',
-    template: '<h1 class="mycustom-h1">{{message}}</h1><welcome></welcome>',
+    template: `<h1 class="mycustom-h1">{{message}}</h1>
+    <welcome></welcome>
+    <p>{{getText()}}</p>
+    `,
     styles: [
         `.mycustom-h1 {
             text-align: center;
@@ -26,6 +29,10 @@ class HelloWorldComponent {
     constructor() {
         console.log('HelloWorldComponent instantiated')
         this.message = 'Hello, World!';
+    }
+
+    getMessage() {
+        return 'Angular is cool!';
     }
 }
 

@@ -1,0 +1,29 @@
+<div class="alert alert-info">
+  <h2>Contact details</h2>
+</div>
+
+<!-- table>tr*4>td*2 -->
+<table class="table table-hover table-bordered">
+  <tr>
+    <td>Name</td>
+    <td>{{contact.name}}</td>
+  </tr>
+  <tr>
+    <td>City</td>
+    <td>
+      <span [innerText]="contact.city"></span>
+    </td>
+  </tr>
+  <tr>
+    <td>Email address</td>
+    <td>{{contact.email}}</td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td>{{contact.phone}}</td>
+  </tr>
+</table>
+
+<div>
+  <button class="btn btn-primary" (click)="changeDetails()" >Change details</button>
+</div>
