@@ -1,0 +1,27 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "Testing webpack module bundler",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "server": "webpack-dev-server --port 4321 --content-base dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kayartaya-vinod"
+  },
+  "keywords": [
+    "webpacktest"
+  ],
+  "author": "Vinod <vinod@vinod.co>",
+  "license": "MIT",
+  "dependencies": {
+    "ts-loader": "^5.3.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
