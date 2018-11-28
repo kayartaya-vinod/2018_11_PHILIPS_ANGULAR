@@ -22,6 +22,7 @@ import { PythonComponent } from './components/courses/python/python.component';
 import { DotnetComponent } from './components/courses/dotnet/dotnet.component';
 import { HibernateComponent } from './components/courses/java/hibernate/hibernate.component';
 import { SpringComponent } from './components/courses/java/spring/spring.component';
+import { SearchContactsByCityComponent } from './modules/components/search-contacts-by-city/search-contacts-by-city.component';
 
 @NgModule({
   declarations: [

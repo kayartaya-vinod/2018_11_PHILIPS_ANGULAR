@@ -19,6 +19,10 @@ const routeConfig: Routes = [
         pathMatch: 'full'
     },
     {
+        path: 'search-contacts',
+        loadChildren: './modules/search-contacts/search-contacts.module#SearchContactsModule'
+    },
+    {
         path: 'contacts',
         component: ContactListComponent
     },

@@ -1,0 +1,12 @@
+<form class="form" (submit)="fetchData()">
+  <input type="search" class="form-control" 
+  placeholder="Type city and hit ENTER key" 
+  name="city" [(ngModel)]="city">
+</form>
+
+<ul class="list-group">
+  <li class="list-group item" *ngFor="let c of contacts">
+    <h3 [routerLink]="['/contacts', c.id]" style="cursor: pointer">{{ c.name }}</h3>
+    <p>{{c.email}}, {{c.phone}}</p>
+  </li>
+</ul>
