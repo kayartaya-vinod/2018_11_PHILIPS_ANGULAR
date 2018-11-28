@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactsService } from 'src/app/services/contacts.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'add-contact',
@@ -11,11 +11,15 @@ import { Router } from '@angular/router';
 export class AddContactComponent implements OnInit {
 
   contactForm: FormGroup;
+  isEdit = false;
 
-  constructor(private service: ContactsService, private router: Router) { }
+  constructor(private service: ContactsService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.contactForm = new FormGroup({
+      id: new FormControl(null),
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
       city: new FormControl(''),
       gender: new FormControl('Male'),
@@ -23,20 +27,23 @@ export class AddContactComponent implements OnInit {
       phone: new FormControl('', [Validators.pattern(/^\d{10,13}$/)])
     });
 
-    // this.contactForm.setValue({
-    //   name: 'Arun',
-    //   city: 'Shimoga',
-    //   gender: 'Male',
-    //   email: '',
-    //   phone: ''
-    // });
-
-    // this.contactForm.controls.email.setValue('arun@exmaple.com');
+    this.activatedRoute.params.subscribe(pathParams => {
+      if ('id' in pathParams) {
+        this.isEdit = true;
+        this.service.getOneContact(pathParams['id'])
+          .subscribe(contact => this.contactForm.setValue(contact));
+      }
+    });
   }
 
   save() {
-    this.service.addContact(this.contactForm.value)
+    let c = this.contactForm.value;
+    let method = 'addContact';
+    if (this.isEdit) {
+      method = 'updateContact';
+    }
+
+    this.service[method](c)
       .subscribe(contact => this.router.navigate(['/contacts', contact.id]));
   }
-
 }

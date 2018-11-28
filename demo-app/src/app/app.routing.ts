@@ -21,6 +21,10 @@ const routeConfig: Routes = [
         component: ViewContactComponent
     },
     {
+        path: 'contacts/:id/edit',
+        component: AddContactModelDriven
+    },
+    {
         path: 'add-contact/template-driven',
         component: AddContactComponent
     },

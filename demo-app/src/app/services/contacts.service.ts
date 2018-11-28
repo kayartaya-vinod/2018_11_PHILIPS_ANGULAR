@@ -36,4 +36,10 @@ export class ContactsService {
     return this.http.post(baseUrl, contact)
       .map(resp => resp.json() as Contact);
   }
+
+  // http://localhost:4000/contacts/33
+  updateContact(contact: Contact): Observable<Contact> {
+    return this.http.put(baseUrl + contact.id, contact)
+      .map(resp => resp.json() as Contact);
+  }
 }

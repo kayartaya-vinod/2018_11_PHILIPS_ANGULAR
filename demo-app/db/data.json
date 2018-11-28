@@ -3,10 +3,10 @@
     {
       "id": 1,
       "name": "Pris Patching",
+      "city": "Washington",
       "gender": "Female",
-      "phone": "4569392508",
       "email": "ppatching0@google.ca",
-      "city": "Chiclayo"
+      "phone": "4569392508"
     },
     {
       "id": 2,
@@ -8043,6 +8043,14 @@
       "email": "",
       "phone": "9484747474",
       "id": 1006
+    },
+    {
+      "id": 1007,
+      "name": "Jane Doe",
+      "city": "Dallas",
+      "gender": "Female",
+      "email": "janedoe@example.com",
+      "phone": "7575765654"
     }
   ]
 }

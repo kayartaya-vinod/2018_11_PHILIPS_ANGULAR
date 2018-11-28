@@ -27,3 +27,6 @@
     <td>{{contact.phone}}</td>
   </tr>
 </table>
+
+<button class="btn btn-primary" 
+  [routerLink]="['/contacts', contact.id, 'edit']" >Edit details</button>
