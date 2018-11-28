@@ -53,7 +53,7 @@ const routeConfig: Routes = [
                     {
                         path: 'hibernate',
                         component: HibernateComponent
-                    }
+                    },
                 ]
             },
             {
@@ -63,7 +63,8 @@ const routeConfig: Routes = [
             {
                 path: 'python',
                 component: PythonComponent
-            }
+            },
+            
         ]
     },
     {
