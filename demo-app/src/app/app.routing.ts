@@ -64,7 +64,6 @@ const routeConfig: Routes = [
                 path: 'python',
                 component: PythonComponent
             },
-            
         ]
     },
     {
