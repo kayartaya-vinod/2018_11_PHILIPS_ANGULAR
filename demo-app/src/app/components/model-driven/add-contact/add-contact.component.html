@@ -1,0 +1,52 @@
+<div class="alert alert-info">
+  <h3>Add a new contact</h3>
+</div>
+
+<form class="form" [formGroup]="contactForm">
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" class="form-control" formControlName="name">
+
+
+    <div *ngIf="contactForm.controls['name'].dirty && !contactForm.controls['name'].valid" class="err">
+      <div *ngIf="contactForm.controls['name'].errors.required">Name is required</div>
+      <div *ngIf="contactForm.controls['name'].errors.minlength">Name must be at least 3 letters</div>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender</label>
+
+    <label><input name="gender" value="Male" type="radio" formControlName="gender"> Male</label>
+    <label><input name="gender" value="Female" type="radio" formControlName="gender"> Female</label>
+
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input id="email" type="email" class="form-control" formControlName="email">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone number</label>
+    <input id="phone" name="phone" type="tel" class="form-control" formControlName="phone">
+
+
+    <div *ngIf="contactForm.controls['phone'].dirty && 
+      contactForm.controls['phone'].errors && 
+      contactForm.controls['phone'].errors.pattern" class="err">
+      Invalid phone number. Must be 10 to 13 digits.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="city">City</label>
+    <input id="city" type="text" class="form-control" formControlName="city">
+  </div>
+
+  <button type="button" [disabled]="!contactForm.valid" class="btn btn-{{ contactForm.valid ? 'primary' : 'danger' }}"
+    (click)="save()">Save details</button>
+
+</form>

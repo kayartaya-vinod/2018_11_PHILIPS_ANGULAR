@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -15,6 +15,7 @@ import routeConfig from './app.routing';
 import { TitlePipe } from './pipes/title.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { AddContactComponent } from './components/template-driven/add-contact/add-contact.component';
+import { AddContactComponent as AddContactModelDriven } from './components/model-driven/add-contact/add-contact.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,12 @@ import { AddContactComponent } from './components/template-driven/add-contact/ad
     PageNotFoundComponent,
     TitlePipe,
     FilterPipe,
-    AddContactComponent
+    AddContactComponent,
+    AddContactModelDriven
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(routeConfig, { useHash: false })

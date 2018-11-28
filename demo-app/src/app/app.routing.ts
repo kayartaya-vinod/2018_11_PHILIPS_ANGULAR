@@ -4,6 +4,7 @@ import { ContactListComponent } from "./components/contact-list/contact-list.com
 import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
 import { ViewContactComponent } from "./components/view-contact/view-contact.component";
 import { AddContactComponent } from "./components/template-driven/add-contact/add-contact.component";
+import { AddContactComponent as AddContactModelDriven } from "./components/model-driven/add-contact/add-contact.component";
 
 const routeConfig: Routes = [
     {
@@ -22,6 +23,10 @@ const routeConfig: Routes = [
     {
         path: 'add-contact/template-driven',
         component: AddContactComponent
+    },
+    {
+        path: 'add-contact/model-driven',
+        component: AddContactModelDriven
     },
     {
         // make sure that this Route config is the last one
