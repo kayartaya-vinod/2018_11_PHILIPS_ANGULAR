@@ -16,6 +16,12 @@ import { TitlePipe } from './pipes/title.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { AddContactComponent } from './components/template-driven/add-contact/add-contact.component';
 import { AddContactComponent as AddContactModelDriven } from './components/model-driven/add-contact/add-contact.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { JavaComponent } from './components/courses/java/java.component';
+import { PythonComponent } from './components/courses/python/python.component';
+import { DotnetComponent } from './components/courses/dotnet/dotnet.component';
+import { HibernateComponent } from './components/courses/java/hibernate/hibernate.component';
+import { SpringComponent } from './components/courses/java/spring/spring.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,13 @@ import { AddContactComponent as AddContactModelDriven } from './components/model
     TitlePipe,
     FilterPipe,
     AddContactComponent,
-    AddContactModelDriven
+    AddContactModelDriven,
+    CoursesComponent,
+    JavaComponent,
+    PythonComponent,
+    DotnetComponent,
+    HibernateComponent,
+    SpringComponent
   ],
   imports: [
     FormsModule,
