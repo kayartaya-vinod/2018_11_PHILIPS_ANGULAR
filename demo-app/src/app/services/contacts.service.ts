@@ -31,4 +31,9 @@ export class ContactsService {
     return this.http.get(baseUrl + id)
       .map(resp => resp.json() as Contact);
   }
+
+  addContact(contact: Contact): Observable<Contact> {
+    return this.http.post(baseUrl, contact)
+      .map(resp => resp.json() as Contact);
+  }
 }

@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import routeConfig from './app.routing';
 import { TitlePipe } from './pipes/title.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { AddContactComponent } from './components/template-driven/add-contact/add-contact.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     HomeComponent,
     PageNotFoundComponent,
     TitlePipe,
-    FilterPipe
+    FilterPipe,
+    AddContactComponent
   ],
   imports: [
     FormsModule,

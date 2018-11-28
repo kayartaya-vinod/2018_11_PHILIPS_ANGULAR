@@ -1,0 +1,58 @@
+<div class="alert alert-info">
+  <h3>Add a new contact</h3>
+</div>
+
+<form class="form" #f1="ngForm">
+
+
+  <!-- .form-group*5>label+input.form-control -->
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" 
+      #name="ngModel"
+      required
+      minlength="3"
+      maxlength="50"
+      class="form-control" [(ngModel)]="contact.name">
+
+      <div *ngIf="name.dirty && name.errors" class="err">
+        <div *ngIf="name.errors.required">Name is required</div>
+        <div *ngIf="name.errors.minlength">Name must be at least 3 letters</div>
+      </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    
+    <label><input name="gender" value="Male"   [(ngModel)]="contact.gender" type="radio"> Male</label>
+    <label><input name="gender" value="Female" [(ngModel)]="contact.gender" type="radio"> Female</label>
+
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input id="email" name="email" type="email" class="form-control" [(ngModel)]="contact.email">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone number</label>
+    <input id="phone" name="phone" type="tel" 
+      #phone="ngModel"
+      pattern="[0-9]{10,13}"
+      class="form-control" [(ngModel)]="contact.phone">
+
+      <div *ngIf="phone.dirty && phone.errors && phone.errors.pattern" class="err">
+        Invalid phone number. Must be 10 to 13 digits.
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="city">City</label>
+    <input id="city" name="city" type="text" class="form-control" [(ngModel)]="contact.city">
+  </div>
+
+  <button class="btn btn-{{ f1.valid ? 'primary' : 'danger' }}" (click)="save()"
+    [disabled]="f1.invalid">Save details</button>
+
+</form>

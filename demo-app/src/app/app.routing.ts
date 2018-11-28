@@ -3,6 +3,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { ContactListComponent } from "./components/contact-list/contact-list.component";
 import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
 import { ViewContactComponent } from "./components/view-contact/view-contact.component";
+import { AddContactComponent } from "./components/template-driven/add-contact/add-contact.component";
 
 const routeConfig: Routes = [
     {
@@ -17,6 +18,10 @@ const routeConfig: Routes = [
     {
         path: 'contacts/:id',
         component: ViewContactComponent
+    },
+    {
+        path: 'add-contact/template-driven',
+        component: AddContactComponent
     },
     {
         // make sure that this Route config is the last one
