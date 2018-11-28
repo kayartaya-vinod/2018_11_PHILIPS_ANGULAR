@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/app/models/contact';
+import { ActivatedRoute } from '@angular/router';
+import { ContactsService } from 'src/app/services/contacts.service';
 
 @Component({
   selector: 'view-contact',
@@ -9,35 +11,18 @@ import { Contact } from 'src/app/models/contact';
 export class ViewContactComponent implements OnInit {
 
   contact = new Contact();
-  flag = true;
+
   // constructor should be limited for dependency injection
-  constructor() {
-    // console.log('ViewContactComponent instantiated!');
+  constructor(private activatedRoute: ActivatedRoute,
+    private service: ContactsService) {
   }
 
   // use ngOnInit for all other initializations
   ngOnInit(): void {
-    // console.log('ViewContactComponent initialized using ngOnInit()!');
-    this.contact.name = 'Vinod';
-    this.contact.city = 'Bangalore';
-    this.contact.email = 'vinod@vinod.co';
-    this.contact.phone = '9731424784';
+    this.activatedRoute.params.subscribe(pathParams => {
+      this.service.getOneContact(pathParams.id)
+        .subscribe(contact => this.contact = contact);
+    });
   }
-  
-  // <button (click)="changeDetails()" >Change details</button>
-  changeDetails(): void {
-    if (this.flag) {
-      this.contact.name = 'John Doe';
-      this.contact.city = 'Dallas';
-      this.contact.email = 'johndoe@example.com';
-      this.contact.phone = '5556424722';
-    }
-    else {
-      this.contact.name = 'Vinod';
-      this.contact.city = 'Bangalore';
-      this.contact.email = 'vinod@vinod.co';
-      this.contact.phone = '9731424784';
-    }
-    this.flag = !this.flag;
-  }
+
 }

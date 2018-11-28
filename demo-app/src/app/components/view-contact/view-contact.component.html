@@ -6,7 +6,7 @@
 <table class="table table-hover table-bordered">
   <tr>
     <td>Name</td>
-    <td>{{contact.name}}</td>
+    <td>{{ contact.gender | title }} {{ contact.name | uppercase }}</td>
   </tr>
   <tr>
     <td>City</td>
@@ -23,7 +23,3 @@
     <td>{{contact.phone}}</td>
   </tr>
 </table>
-
-<div>
-  <button class="btn btn-primary" (click)="changeDetails()" >Change details</button>
-</div>

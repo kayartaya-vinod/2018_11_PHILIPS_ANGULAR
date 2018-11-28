@@ -1,0 +1,28 @@
+<div class="alert alert-info">
+    <h2>List of all contacts</h2>
+  </div>
+  
+  <!-- [(ngModel)]="searchToken" binds the model data with the UI element -->
+  <!-- This is a two-way binding. Change in the model data updates the UI,
+  and vice versa. If searchToken is not found in the component object, it
+  will be created. -->
+  <input type="search" class="form-control" 
+    placeholder="search.." autofocus [(ngModel)]="searchToken">
+  
+  <!-- .card>.card-body>(.card-title+.card-text) -->
+  <div class="card" 
+    *ngFor="let c of (contacts | filter: searchToken: ['name', 'city'])">
+    <div class="card-body">
+      <div class="card-title">
+        <a href="" [routerLink]="['/contacts', c.id]">
+          {{ c.gender | title }}
+          {{ c.name }}
+        </a>
+      </div>
+      <div class="card-text">{{ c.city }}</div>
+    </div>
+  </div>
+  
+  <div>
+    <button class="btn btn-primary" (click)="loadMore()">Load more...</button>
+  </div>
