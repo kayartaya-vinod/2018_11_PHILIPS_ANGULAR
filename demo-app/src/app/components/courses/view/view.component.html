@@ -10,9 +10,16 @@
   </thead>
   <tbody>
     <tr *ngFor="let c of courses | async">
-      <td>{{c.title}}</td>
+      <td>{{c.title}}
+      </td>
       <td>{{c.fee}}</td>
-      <td>{{c.trainer}}</td>
+      <td>{{c.trainer}}
+
+        <a href="javascript:void(0)" (click)="deleteCourse(c.title)">
+          <span class="fa fa-trash pull-right"></span>
+        </a>
+        
+      </td>
     </tr>
   </tbody>
 </table>

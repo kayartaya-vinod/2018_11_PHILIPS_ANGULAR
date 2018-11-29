@@ -22,5 +22,4 @@ export class AddComponent implements OnInit {
     this.store.dispatch(new CourseAction(ADD_COURSE, this.course));
     this.course = new Course();
   }
-
 }

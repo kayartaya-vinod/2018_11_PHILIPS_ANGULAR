@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-title">{{value.name}}</div>
+    <div class="card-text">{{value.description}}</div>
+
+    <ul class="list-group">
+      <product *ngFor="let p of value.products" [value]="p" ></product>
+    </ul>
+  </div>
+</div>

@@ -30,6 +30,10 @@ import { BoxifyDirective } from './directives/boxify.directive';
 import { AddComponent } from './components/courses/add/add.component';
 import { ViewComponent } from './components/courses/view/view.component';
 import coursesReducer from './reducers/courses.reducer';
+import { NestedFormsComponent } from './components/nested-forms/nested-forms.component';
+import { ParentChildComponent } from './components/parent-child/parent-child.component';
+import { ProductComponent } from './components/parent-child/product/product.component';
+import { CategoryComponent } from './components/parent-child/category/category.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +56,11 @@ import coursesReducer from './reducers/courses.reducer';
     RxjsTestComponent,
     BoxifyDirective,
     AddComponent,
-    ViewComponent
+    ViewComponent,
+    NestedFormsComponent,
+    ParentChildComponent,
+    ProductComponent,
+    CategoryComponent
   ],
   imports: [
     FormsModule,

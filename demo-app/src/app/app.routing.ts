@@ -12,12 +12,22 @@ import { PythonComponent } from "./components/courses/python/python.component";
 import { SpringComponent } from "./components/courses/java/spring/spring.component";
 import { HibernateComponent } from "./components/courses/java/hibernate/hibernate.component";
 import { RxjsTestComponent } from "./components/rxjs-test/rxjs-test.component";
+import { NestedFormsComponent } from "./components/nested-forms/nested-forms.component";
+import { ParentChildComponent } from "./components/parent-child/parent-child.component";
 
 const routeConfig: Routes = [
     {
         path: '',
         component: HomeComponent,
         pathMatch: 'full'
+    },
+    {
+        path: 'parent-child-component-demo',
+        component: ParentChildComponent
+    },
+    {
+        path: 'nested-forms-demo',
+        component: NestedFormsComponent
     },
     {
         path: 'search-contacts',

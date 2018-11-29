@@ -1,0 +1,32 @@
+<h3>Nested forms demo</h3>
+<form [formGroup]="employee" class="form">
+
+  <!-- .form-group*3>label+input.form-control -->
+  <div class="form-group">
+    <label for="">Name: </label>
+    <input type="text" class="form-control" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label for="">Email address: </label>
+    <input type="text" class="form-control" formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="">Phone number: </label>
+    <input type="text" class="form-control" formControlName="phone">
+  </div>
+  <div class="form-group">
+    <p>Skills: <button (click)="addSkill()" class="btn btn-secondary">Add skill</button> </p>
+
+    <div formArrayName="skills" 
+      *ngFor="let skill of employee.get('skills')['controls']; let i = index;">
+      <input type="text" class="form-control" [formControlName]="i">
+    </div>
+
+  </div>
+
+
+  <button class="btn btn-primary"
+    [disabled]="employee.invalid"
+    (click)="showData()">Show data</button>
+
+</form>
