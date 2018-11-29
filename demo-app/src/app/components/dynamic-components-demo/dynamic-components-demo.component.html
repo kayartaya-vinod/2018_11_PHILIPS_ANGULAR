@@ -1,0 +1,18 @@
+<div class="alert alert-primary">
+  <h3>Dynamic components demo</h3>
+</div>
+
+<div>
+  <button class="btn btn-secondary" 
+  (click)="loadComponent(c.component)" 
+  *ngFor="let c of components">{{c.buttonLabel}}</button>
+</div>
+
+<!-- Placeholder for dynamically placed/generated component -->
+<div appBoxify dyna-content></div>
+<div appBoxify dyna-content></div>
+<div appBoxify dyna-content></div>
+<div appBoxify dyna-content></div>
+<div appBoxify dyna-content></div>
+
+<p>That's all folks!!</p>

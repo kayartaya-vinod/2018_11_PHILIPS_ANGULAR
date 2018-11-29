@@ -15,5 +15,4 @@ export class CategoryComponent implements OnInit {
   ngOnInit() {
     // console.log('value is', this.value);
   }
-
 }

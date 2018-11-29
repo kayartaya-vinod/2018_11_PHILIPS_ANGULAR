@@ -14,12 +14,17 @@ import { HibernateComponent } from "./components/courses/java/hibernate/hibernat
 import { RxjsTestComponent } from "./components/rxjs-test/rxjs-test.component";
 import { NestedFormsComponent } from "./components/nested-forms/nested-forms.component";
 import { ParentChildComponent } from "./components/parent-child/parent-child.component";
+import { DynamicComponentsDemoComponent } from "./components/dynamic-components-demo/dynamic-components-demo.component";
 
 const routeConfig: Routes = [
     {
         path: '',
         component: HomeComponent,
         pathMatch: 'full'
+    },
+    {
+        path: 'dynamic-components-demo',
+        component: DynamicComponentsDemoComponent
     },
     {
         path: 'parent-child-component-demo',

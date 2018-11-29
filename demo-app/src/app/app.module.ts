@@ -34,6 +34,8 @@ import { NestedFormsComponent } from './components/nested-forms/nested-forms.com
 import { ParentChildComponent } from './components/parent-child/parent-child.component';
 import { ProductComponent } from './components/parent-child/product/product.component';
 import { CategoryComponent } from './components/parent-child/category/category.component';
+import { DynamicComponentsDemoComponent } from './components/dynamic-components-demo/dynamic-components-demo.component';
+import { DynaContentDirective } from './directives/dyna-content.directive';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { CategoryComponent } from './components/parent-child/category/category.c
     NestedFormsComponent,
     ParentChildComponent,
     ProductComponent,
-    CategoryComponent
+    CategoryComponent,
+    DynamicComponentsDemoComponent,
+    DynaContentDirective
   ],
   imports: [
     FormsModule,
