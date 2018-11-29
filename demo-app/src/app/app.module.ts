@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -23,6 +25,11 @@ import { DotnetComponent } from './components/courses/dotnet/dotnet.component';
 import { HibernateComponent } from './components/courses/java/hibernate/hibernate.component';
 import { SpringComponent } from './components/courses/java/spring/spring.component';
 import { SearchContactsByCityComponent } from './modules/components/search-contacts-by-city/search-contacts-by-city.component';
+import { RxjsTestComponent } from './components/rxjs-test/rxjs-test.component';
+import { BoxifyDirective } from './directives/boxify.directive';
+import { AddComponent } from './components/courses/add/add.component';
+import { ViewComponent } from './components/courses/view/view.component';
+import coursesReducer from './reducers/courses.reducer';
 
 @NgModule({
   declarations: [
@@ -41,14 +48,20 @@ import { SearchContactsByCityComponent } from './modules/components/search-conta
     PythonComponent,
     DotnetComponent,
     HibernateComponent,
-    SpringComponent
+    SpringComponent,
+    RxjsTestComponent,
+    BoxifyDirective,
+    AddComponent,
+    ViewComponent
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(routeConfig, { useHash: false })
+    RouterModule.forRoot(routeConfig, { useHash: false }),
+    // StoreModule.forRoot takes an object representing all our reducers
+    StoreModule.forRoot({ courses: coursesReducer })
   ],
   providers: [
     // register all services (injectables) here:

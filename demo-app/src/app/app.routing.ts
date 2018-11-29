@@ -11,6 +11,7 @@ import { DotnetComponent } from "./components/courses/dotnet/dotnet.component";
 import { PythonComponent } from "./components/courses/python/python.component";
 import { SpringComponent } from "./components/courses/java/spring/spring.component";
 import { HibernateComponent } from "./components/courses/java/hibernate/hibernate.component";
+import { RxjsTestComponent } from "./components/rxjs-test/rxjs-test.component";
 
 const routeConfig: Routes = [
     {
@@ -21,6 +22,10 @@ const routeConfig: Routes = [
     {
         path: 'search-contacts',
         loadChildren: './modules/search-contacts/search-contacts.module#SearchContactsModule'
+    },
+    {
+        path: 'rxjs-test',
+        component: RxjsTestComponent
     },
     {
         path: 'contacts',
