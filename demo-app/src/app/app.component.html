@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1>Advanced Angular Examples</h1>
+            <h1 [innerHTML]="title | safe: 'html'"></h1>
         </div>
     </div>
 

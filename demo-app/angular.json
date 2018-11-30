@@ -51,6 +51,13 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "kn": {
+              "aot": true,
+              "outputPath": "dist/demo-app/",
+              "i18nFile": "src/messages_kn.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "kn"
             }
           }
         },
@@ -62,8 +69,12 @@
           "configurations": {
             "production": {
               "browserTarget": "demo-app:build:production"
+            },
+            "kn": {
+              "browserTarget": "demo-app:build:kn"
             }
           }
+          
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

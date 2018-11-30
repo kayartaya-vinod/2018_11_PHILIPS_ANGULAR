@@ -10,6 +10,7 @@
     placeholder="search.." autofocus [(ngModel)]="searchToken">
   
   <!-- .card>.card-body>(.card-title+.card-text) -->
+  
   <div class="card" 
     *ngFor="let c of (contacts | filter: searchToken: ['name', 'city'])">
     <div class="card-body">

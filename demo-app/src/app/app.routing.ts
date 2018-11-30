@@ -18,7 +18,7 @@ import { DynamicComponentsDemoComponent } from "./components/dynamic-components-
 import { WebsocketDemoComponent } from "./components/websocket-demo/websocket-demo.component";
 import { ClientsideLazyloadComponent } from "./components/clientside-lazyload/clientside-lazyload.component";
 
-const routeConfig: Routes = [
+export const routeConfig: Routes = [
     {
         path: '',
         component: HomeComponent,
@@ -106,5 +106,3 @@ const routeConfig: Routes = [
         component: PageNotFoundComponent
     },
 ];
-
-export default routeConfig;

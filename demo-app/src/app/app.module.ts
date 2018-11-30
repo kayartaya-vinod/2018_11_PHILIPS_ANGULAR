@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -13,7 +13,7 @@ import { ContactsService } from './services/contacts.service';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import routeConfig from './app.routing';
+import { routeConfig } from './app.routing';
 import { TitlePipe } from './pipes/title.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { AddContactComponent } from './components/template-driven/add-contact/add-contact.component';
@@ -38,6 +38,8 @@ import { DynamicComponentsDemoComponent } from './components/dynamic-components-
 import { DynaContentDirective } from './directives/dyna-content.directive';
 import { WebsocketDemoComponent } from './components/websocket-demo/websocket-demo.component';
 import { ClientsideLazyloadComponent } from './components/clientside-lazyload/clientside-lazyload.component';
+import { SafePipe } from './safe.pipe';
+import { WelcomeComponent } from 'src/examples/components/welcome.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,10 @@ import { ClientsideLazyloadComponent } from './components/clientside-lazyload/cl
     DynamicComponentsDemoComponent,
     DynaContentDirective,
     WebsocketDemoComponent,
-    ClientsideLazyloadComponent
+    ClientsideLazyloadComponent,
+    SafePipe,
+    WelcomeComponent
+
   ],
   imports: [
     FormsModule,
