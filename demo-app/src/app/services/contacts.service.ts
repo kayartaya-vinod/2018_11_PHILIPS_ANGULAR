@@ -5,14 +5,24 @@ import 'rxjs/add/operator/map';
 
 // npm install rxjs@6 rxjs-compat@6 --save
 import { Contact } from '../models/contact';
+import { HttpClient } from '@angular/common/http';
 
 const baseUrl = 'http://localhost:4000/contacts/';
 
 @Injectable()
 export class ContactsService {
 
-  constructor(private http: Http) {
+  private contacts;
+
+  // Note: HttpClient service is ued only in getContacts() method
+  constructor(private http: Http, private hc: HttpClient) {
     console.log('ContactsService instantiated!');
+  }
+
+  // no pagination
+  async getContacts() {
+    const data = await this.hc.get(baseUrl).toPromise()
+    return data;
   }
 
   getAllContacts(pageNum = 1): Observable<Array<Contact>> {

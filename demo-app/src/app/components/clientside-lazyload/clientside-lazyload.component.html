@@ -1,0 +1,11 @@
+<div class="alert alert-info">
+  <h3>Clientside pagination demo</h3>
+</div>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let c of contacts">
+    {{ c.name }}, {{ c.city }}
+  </li>
+</ul>
+
+<button class="btn btn-primary" (click)="loadMore()">Load more</button>

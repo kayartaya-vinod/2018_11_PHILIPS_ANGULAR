@@ -1,0 +1,23 @@
+<div class="alert alert-info">
+  <h3>Websocket demo</h3>
+</div>
+
+<img src="{{imgData}}" alt="">
+
+<!-- <img src="http://localhost:5000/category/{{messages | async}}/picture"
+  style="width: 100%" >
+
+<img src="http://localhost:5000/picture/{{messages | async}}"
+  style="width: 100%" > -->
+
+<!-- div>label+input.form-control+button.btn.btn-primary -->
+<div>
+  <label for="message">Enter a message to post: </label>
+  <input type="text" id="message" name="message" [(ngModel)]="message" class="form-control">
+  <button class="btn btn-primary" (click)="postMessage()" >Post message</button>
+</div>
+
+<div *ngIf="messages">
+  <h4>Message received so far...</h4>
+  {{ messages | async }}
+</div>

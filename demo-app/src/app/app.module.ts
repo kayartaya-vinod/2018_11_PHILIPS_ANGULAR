@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
-
+import { HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -36,6 +36,8 @@ import { ProductComponent } from './components/parent-child/product/product.comp
 import { CategoryComponent } from './components/parent-child/category/category.component';
 import { DynamicComponentsDemoComponent } from './components/dynamic-components-demo/dynamic-components-demo.component';
 import { DynaContentDirective } from './directives/dyna-content.directive';
+import { WebsocketDemoComponent } from './components/websocket-demo/websocket-demo.component';
+import { ClientsideLazyloadComponent } from './components/clientside-lazyload/clientside-lazyload.component';
 
 @NgModule({
   declarations: [
@@ -64,13 +66,16 @@ import { DynaContentDirective } from './directives/dyna-content.directive';
     ProductComponent,
     CategoryComponent,
     DynamicComponentsDemoComponent,
-    DynaContentDirective
+    DynaContentDirective,
+    WebsocketDemoComponent,
+    ClientsideLazyloadComponent
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(routeConfig, { useHash: false }),
     // StoreModule.forRoot takes an object representing all our reducers
     StoreModule.forRoot({ courses: coursesReducer })

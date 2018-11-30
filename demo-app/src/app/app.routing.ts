@@ -15,12 +15,22 @@ import { RxjsTestComponent } from "./components/rxjs-test/rxjs-test.component";
 import { NestedFormsComponent } from "./components/nested-forms/nested-forms.component";
 import { ParentChildComponent } from "./components/parent-child/parent-child.component";
 import { DynamicComponentsDemoComponent } from "./components/dynamic-components-demo/dynamic-components-demo.component";
+import { WebsocketDemoComponent } from "./components/websocket-demo/websocket-demo.component";
+import { ClientsideLazyloadComponent } from "./components/clientside-lazyload/clientside-lazyload.component";
 
 const routeConfig: Routes = [
     {
         path: '',
         component: HomeComponent,
         pathMatch: 'full'
+    },
+    {
+        path: 'clientside-lazyload-demo',
+        component: ClientsideLazyloadComponent
+    },
+    {
+        path: 'websocket-demo',
+        component: WebsocketDemoComponent
     },
     {
         path: 'dynamic-components-demo',
