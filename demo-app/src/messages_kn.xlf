@@ -28,7 +28,7 @@
       </trans-unit>
       <trans-unit id="6c79459f8597d8e68c50754cb476106d99cbd434" datatype="html">
         <source>Add contact (model driven)</source>
-        <target>Add contact (model driven)</target>
+        <target>ಸಂಪರ್ಕ ಸೇರಿಸಿ (ಮಾದರಿ ಚಾಲಿತ)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">14</context>
@@ -36,7 +36,7 @@
       </trans-unit>
       <trans-unit id="e318ecf64e2df735f928f1f67068c1fe7ad71c65" datatype="html">
         <source>View courses (nested routes demo)</source>
-        <target>View courses (nested routes demo)</target>
+        <target>ಕೋರ್ಸುಗಳನ್ನು ವೀಕ್ಷಿಸಿ (ನೆಸ್ಟೆಡ್ ಮಾರ್ಗಗಳು ಡೆಮೊ)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">18</context>
@@ -44,7 +44,7 @@
       </trans-unit>
       <trans-unit id="d6efa3aaf2174569dd12e80ca8b1c22bba326988" datatype="html">
         <source>Search contacts by id (lazy loading a module)</source>
-        <target>Search contacts by id (lazy loading a module)</target>
+        <target>ಐಡಿ ಮೂಲಕ ಸಂಪರ್ಕಗಳನ್ನು ಹುಡುಕಿ (ಸೋಮಾರಿತನ ಲೋಡ್ ಮಾಡುವ ಮಾಡ್ಯೂಲ್)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">22</context>
@@ -52,7 +52,7 @@
       </trans-unit>
       <trans-unit id="52ee1fcdc25a6b02271478d26c7e5759a4e7ff72" datatype="html">
         <source>Search contacts by city (lazy loading a module)</source>
-        <target>Search contacts by city (lazy loading a module)</target>
+        <target>ನಗರದ ಮೂಲಕ ಸಂಪರ್ಕಗಳನ್ನು ಹುಡುಕಿ (ಸೋಮಾರಿತನ ಲೋಡ್ ಮಾಡಲಾದ ಮಾಡ್ಯೂಲ್)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">26</context>
@@ -60,7 +60,7 @@
       </trans-unit>
       <trans-unit id="7797e8648e30aa32d20d2ba589abe4e8179ad097" datatype="html">
         <source>Rxjs test</source>
-        <target>Rxjs test</target>
+        <target>Rxjs ಪರೀಕ್ಷೆ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">30</context>
@@ -68,7 +68,7 @@
       </trans-unit>
       <trans-unit id="921086f1ff51876df66d2fcb73f134a8def3e29f" datatype="html">
         <source>Nested forms demo</source>
-        <target>Nested forms demo</target>
+        <target>ನೆಸ್ಟೆಡ್ ಫಾರ್ಮ್ ಡೆಮೊ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">34</context>
@@ -76,7 +76,7 @@
       </trans-unit>
       <trans-unit id="0bd0331c6bf7d525975f1c4736b004ba7c19f036" datatype="html">
         <source>Parent child component demo</source>
-        <target>Parent child component demo</target>
+        <target>ಪೋಷಕ ಮಗು ಘಟಕ ಡೆಮೊ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">38</context>
@@ -84,7 +84,7 @@
       </trans-unit>
       <trans-unit id="62f2ff638ddd3a9b9b89d4f33e7bfd72ebaaa1a3" datatype="html">
         <source>Dynamic components demo</source>
-        <target>Dynamic components demo</target>
+        <target>ಡೈನಾಮಿಕ್ ಘಟಕಗಳು ಡೆಮೊ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">42</context>
@@ -92,7 +92,7 @@
       </trans-unit>
       <trans-unit id="a2df287f1db6e29cb5350d1388317c645d245914" datatype="html">
         <source>Websocket demo</source>
-        <target>Websocket demo</target>
+        <target>Websocket ಡೆಮೊ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">46</context>
@@ -100,7 +100,7 @@
       </trans-unit>
       <trans-unit id="a7a6e2353fcd965b24928ae392426dc30f4fd9a3" datatype="html">
         <source>Clientside lazyload demo</source>
-        <target>Clientside lazyload demo</target>
+        <target>ಕ್ಲೈಂಟ್ ಸೈಡ್ ಸೋಮಾರಿತನ ಲೋಡ್ ಡೆಮೊ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">50</context>
